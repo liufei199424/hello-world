@@ -1,21 +1,12 @@
 <?php
 namespace app\index\controller;
 use think\Controller;
-use think\Db;
 
-class Index extends Controller
+class Test extends Controller
 {
-    public function index($name = 'thinkphp')
-    {
-        $this->assign('name', $name);
-        return $this->fetch();
-    }
-
     public function hello()
     {
-        $data = Db::name('data')->find();
-        $this->assign('result', $data);
-        return $this->fetch();
+        return 'hello,thinkphp!我是方汉文！我为自己代言！！！';
     }
 
     public function test()
