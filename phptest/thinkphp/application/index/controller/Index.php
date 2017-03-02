@@ -11,8 +11,9 @@ class Index extends Controller
         return $this->fetch();
     }
 
-    public function hello()
+    public function hello($name = 'thinkphp')
     {
+        echo $name;
         $data = Db::name('data')->find();
         $this->assign('result', $data);
         return $this->fetch();
