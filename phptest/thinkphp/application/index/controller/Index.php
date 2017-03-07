@@ -5,6 +5,10 @@ use think\Db;
 
 class Index extends Controller
 {
+    public function _initialize() {
+        echo "我是初始化函数<br>";
+    }
+
     public function index($name = 'thinkphp')
     {
         $this->assign('name', $name);
@@ -21,7 +25,7 @@ class Index extends Controller
 
     public function test()
     {
-        return '这是一个测试方法!';
+        return '这是一个测试方法!ffff';
     }
 
     protected function hello2()

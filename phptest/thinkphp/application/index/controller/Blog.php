@@ -20,8 +20,8 @@ class Blog
         return '查看' . $year . '/' . $month . '的归档内容';
     }
 
-    public function getage($age)
-    {
-        return '查看age=' . $age . '的归档内容';
-    }
+    // public function getage($age)
+    // {
+    //     return '查看age=' . $age . '的归档内容';
+    // }
 }

@@ -9,9 +9,9 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-use think\Route;
+// use think\Route;
 
-Route::get('blog/:age','index/blog/getage');
+// Route::get('blog/:age','index/blog/getage');
 
 return [
     '__pattern__' => [
@@ -19,7 +19,7 @@ return [
     ],
     '[hello]'     => [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
+        ':name' => ['index/hello', ['method' => 'get'],['name' => '\w+']],
     ],
 
     // 定义闭包
@@ -38,9 +38,15 @@ return [
     // 'blog/:id'          => ['blog/get', ['method' => 'get'], ['id' => '\d+']],
     // 'blog/:name'        => ['blog/read', ['method' => 'get'], ['name' => '\w+']],
 
+    // 访问方式 tp5.com?s=blog/2014/11
     '[blog]' => [
         'year/:month' => ['index/blog/archive', ['method' => 'get'], ['year' => '\d{4}', 'month' => '\d{2}']],
         ':id' => ['index/blog/get', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/blog/read', ['method' => 'get'], ['name' => '\w+']],
+    ],
+    
+    '[before]' => [
+        'hello' => ['index/before_action/hello',['method' => 'get']],
+        'data' => ['index/before_action/data',['method' => 'get']],
     ],
 ];
