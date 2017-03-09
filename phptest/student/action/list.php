@@ -2,7 +2,7 @@
     try {
         $dbh = new PDO("mysql:host=localhost;dbname=test", 'root', 'root');
     } catch (Exception $e) {
-        echo "Connection error: " . $exception->getMessage();
+        echo "Connection error: " . $e->getMessage();
     }
 
     $query = "select *

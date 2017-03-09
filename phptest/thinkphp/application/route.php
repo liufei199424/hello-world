@@ -29,6 +29,7 @@ return [
 
     // 'hello/[:name]$' => 'index/index/hello',
     'index/[:name]$' => 'index/index/index',
+    'hello/[:name]' => 'index/index/hello',
     'test' => 'index/index/test',
 
     // 定义路由的请求类型和后缀
@@ -44,7 +45,7 @@ return [
         ':id' => ['index/blog/get', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/blog/read', ['method' => 'get'], ['name' => '\w+']],
     ],
-    
+
     '[before]' => [
         'hello' => ['index/before_action/hello',['method' => 'get']],
         'data' => ['index/before_action/data',['method' => 'get']],

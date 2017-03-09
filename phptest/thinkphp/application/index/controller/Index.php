@@ -25,7 +25,7 @@ class Index extends Controller
 
     public function test()
     {
-        return '这是一个测试方法!ffff';
+        return '这是一个测试方法!';
     }
 
     protected function hello2()
