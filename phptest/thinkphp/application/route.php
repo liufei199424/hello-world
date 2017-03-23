@@ -30,7 +30,7 @@ return [
     // 'hello/[:name]$' => 'index/index/hello',
     'index/[:name]$' => 'index/index/index',
     'hello/[:name]' => 'index/index/hello',
-    'test' => 'index/index/test',
+    // 'test' => 'index/index/test',
 
     // 定义路由的请求类型和后缀
     // 'hello/[:name]' => ['index/index/hello', ['method' => 'get', 'ext' => 'html']],
